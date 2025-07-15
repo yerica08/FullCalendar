@@ -1,0 +1,68 @@
+[
+    {
+      "id": "test01",
+      "title": "팀 회의",
+      "start": "2025-07-15",
+      "extendedProps": {
+        "category": "회의"
+      }
+    },
+    {
+      "id": "test02",
+      "title": "경주 출장",
+      "start": "2025-07-18",
+      "end": "2025-07-20",
+      "extendedProps": {
+        "category": "출장"
+      }
+    },
+    {
+      "id": "test03",
+      "title": "네이버 링크",
+      "start": "2025-07-01",
+      "allDay": true,
+      "url": "https://www.naver.com",
+      "classNames": "naver"
+    },
+    {
+      "id": "row01",
+      "title": "작업01",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row02",
+      "title": "작업02",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row03",
+      "title": "작업03",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row04",
+      "title": "작업04",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row05",
+      "title": "작업05",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row06",
+      "title": "작업06",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row07",
+      "title": "작업07",
+      "start": "2025-07-19"
+    },
+    {
+      "id": "row08",
+      "title": "작업08",
+      "start": "2025-07-19"
+    }
+  ]
+  

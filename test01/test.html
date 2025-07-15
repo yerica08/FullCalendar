@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test01</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <!-- 
+        홈페이지 : https://fullcalendar.io/
+        공식 문서 : https://fullcalendar.io/docs#toc
+        GitHub : https://github.com/fullcalendar/fullcalendar
+
+        1. 어플리케이션에 CSP(콘텐츠 보안 정책)이 있는 경우 : https://fullcalendar.io/docs/content-security-policy
+    -->
+    <style>
+        #calendar{
+            width: 800px;
+        }
+        .category-meeting{
+            background-color: pink;
+            border-color: pink;
+        }
+        /*
+            .fc-h-event .fc-event-main 에서 color가 들어가 있음
+        */
+        .category-meeting > div{
+            color: #222 !important;
+        }
+        .category-trip{
+            background-color: green;
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="gotoDate">2026년3월3일로 이동</button>
+    <button type="button" id="getEvents">이벤트 값 얻기</button>
+    <div id="calendar"></div>
+    <script type="module" src="./test.js"></script>
+</body>
+</html>
