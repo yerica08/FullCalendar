@@ -1,5 +1,7 @@
 # FullCalendar
 
+version 6.1.18
+
 Full-sized drag & drop calendar in JavaScript
 
 - [Project Website](https://fullcalendar.io/)
