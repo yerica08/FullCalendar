@@ -1,0 +1,89 @@
+[
+   {
+      "id": "doc-1",
+      "groupId": "doc",
+      "title": "전자결재",
+      "start": "2025-07-01T13:00:00",
+      "url": "/testPages/doc.html"
+   },
+   {
+      "id": "expense-1",
+      "groupId": "expense",
+      "title": "지출품의서",
+      "start": "2025-07-05T13:00:00",
+      "end": "2025-07-11T15:00:00",
+      "url": "/testPages/expense.html"
+   },
+   {
+      "id": "expense-2",
+      "groupId": "expense",
+      "title": "지출품의서2",
+      "start": "2025-07-15T13:00:00",
+      "url": "/testPages/expense.html"
+   },
+   {
+      "id": "row01",
+      "groupId": "row",
+      "title": "작업01",
+      "start": "2025-07-18T09:00:00"
+   },
+   {
+      "id": "row02",
+      "groupId": "row",
+      "title": "작업02",
+      "start": "2025-07-18T10:00:00"
+   },
+   {
+      "id": "row03",
+      "groupId": "row",
+      "title": "작업03",
+      "start": "2025-07-18T11:00:00"
+   },
+   {
+      "id": "row04",
+      "groupId": "row",
+      "title": "작업04",
+      "start": "2025-07-18T12:30:00"
+   },
+   {
+      "id": "row05",
+      "groupId": "row",
+      "title": "작업05",
+      "start": "2025-07-18T12:30:00"
+   },
+   {
+      "id": "row06",
+      "groupId": "row",
+      "title": "작업06",
+      "start": "2025-07-18T12:30:00"
+   },
+   {
+      "id": "row07",
+      "groupId": "row",
+      "title": "작업07",
+      "start": "2025-07-18T13:00:00"
+   },
+   {
+      "id": "row08",
+      "groupId": "row",
+      "title": "작업08",
+      "start": "2025-07-18T13:30:00"
+   },
+   {
+    "id": "row08",
+    "groupId": "row",
+    "title": "작업08",
+    "start": "2025-07-18T13:30:00",
+    "allDay": true
+ },
+   {
+    "id": "recurring-1",
+    "groupId": "recurring",
+    "title": "반복 이벤트",
+    "daysOfWeek": [1],
+    "startTime": "08:00:00",
+    "endTime": "09:00:00",
+    "startRecur": "2025-07-01",
+    "endRecur": "2025-08-30"
+ }
+]

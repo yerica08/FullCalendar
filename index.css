@@ -1,0 +1,225 @@
+@import url(./reset.css); /* 초기화 css */
+
+:root{
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: hsla(0, 0%, 82%, .3);
+    --fc-neutral-text-color: grey;
+    --fc-border-color: #eee;
+    --fc-button-text-color: #444;
+    --fc-button-bg-color: #f9f9f9;
+    --fc-button-border-color: #eee;
+    --fc-button-hover-bg-color: #eee;
+    --fc-button-hover-border-color: #eee;
+    --fc-button-active-bg-color: #eee;
+    --fc-button-active-border-color: #eee;
+    --fc-event-bg-color: #f9f9f9;
+    --fc-event-border-color: #ddd;
+    --fc-event-text-color: #222;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, .25);
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+    --fc-non-business-color: rgb(214 214 214 / 12%);
+    --fc-bg-event-color: #8fdf82;
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, .3);
+    --fc-today-bg-color: rgba(255, 220, 40, .15);
+    --fc-now-indicator-color: red;
+}
+
+#calendar{
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+}
+/* td min height */
+.fc .fc-daygrid-day-frame {
+    min-height: 120px;
+    height: 100%;
+}
+/* button */
+.fc .fc-button{
+    padding: 0.3em 0.65em 0.45em;
+    font-size: 12px;
+}
+.fc .fc-button-primary:disabled{
+    opacity: 0;
+}
+
+/* th - 요일 */
+.fc-theme-standard th{
+    background-color : #f5f5f5;
+}
+.fc-theme-standard th a{
+    color: #787878;
+}
+.fc .fc-col-header-cell-cushion {
+    pointer-events: none;
+}
+
+/* event block, event dot */
+.fc-h-event .fc-event-main{
+    padding: 1px 8px;
+}
+.fc-event-start.fc-h-event .fc-event-main{
+    border-left: 2px solid #000;
+}
+.fc-event-end.fc-h-event .fc-event-main{
+    border-right: 2px solid #000;
+}
+.fc-h-event .fc-event-main-frame{
+    align-items: center;
+}
+.fc-event-time,
+.fc-daygrid-block-event .fc-event-time{
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    opacity: 0.65;
+}
+.fc-daygrid-dot-event .fc-event-title,
+.fc-daygrid-block-event .fc-event-title-container{
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.fc-daygrid-dot-event.fc-event-mirror, .fc-daygrid-dot-event:hover{
+    background: rgb(0 0 0 / 5%);
+}
+a:hover{
+    transform: translateY(-2px);
+}
+a:hover div{
+    cursor: pointer;
+}
+
+/*
+    < color : 옅은 색, 짙은 색 >
+
+    1. sky : #BAE8ED, #62BCD6
+    2. red : #EDBABB, #D2373A
+    3. orange : #FDCBC3, #FE866E
+    4. pink : #F9C1E7, #fb4fc2
+    5. green : #B2E7C2, #37B64E
+    6. yellow : #F3F1BE, #DFD800
+    7. purple: #DCB2E7, #8737B6
+*/
+
+/* expense - pink */
+.fc-h-event.expense{
+    background-color: #F9C1E7;
+    border: 1px solid #F9C1E7;
+}
+.fc-h-event.expense .fc-event-main{
+    color: #000;
+}
+.expense .fc-daygrid-event-dot{
+    border-color: #fb4fc2;
+}
+.expense.fc-v-event{
+    background-color: #fff2fb;
+    border-color: #F9C1E7;
+}
+.expense .fc-list-event-dot{
+    border-color: #fb4fc2;
+}
+
+/* doc - sky */
+.fc-h-event.doc{
+    background-color: #BAE8ED;
+    border: 1px solid #BAE8ED;
+}
+.fc-h-event.doc .fc-event-main{
+    color: #000;
+}
+.doc .fc-daygrid-event-dot{
+    border-color: #62BCD6;
+}
+.doc.fc-v-event{
+    background-color: #f0feff;
+    border-color: #BAE8ED;
+}
+.doc .fc-list-event-dot{
+    border-color: #62BCD6;
+}
+
+/*  row - green */
+.fc-h-event.row{
+    background-color: #B2E7C2;
+    border: 1px solid #B2E7C2;
+}
+.fc-h-event.row .fc-event-main{
+    color: #000;
+}
+.row .fc-daygrid-event-dot{
+    border-color: #37B64E;
+}
+.row.fc-v-event{
+    background-color: #eefff3;
+    border-color: #B2E7C2;
+}
+.row .fc-list-event-dot{
+    border-color: #37B64E;
+}
+
+/*  recurring - orange */
+.fc-h-event.recurring{
+    background-color: #FDCBC3;
+    border: 1px solid #FDCBC3;
+}
+.fc-h-event.recurring .fc-event-main{
+    color: #000;
+}
+.recurring .fc-daygrid-event-dot{
+    border-color: #FE866E;
+}
+.recurring.fc-v-event{
+    background-color: #fff1ef;
+    border-color: #FDCBC3;
+}
+.recurring .fc-list-event-dot{
+    border-color: #FE866E;
+}
+
+/* dayGrid */
+.fc-timeGridWeek-view .fc-daygrid-day-number,
+.fc-timeGridWeek-view .fc-timegrid-col-misc,
+.fc-timeGridDay-view .fc-timegrid-col-misc,
+.fc-timeGridDay-view .fc-daygrid-day-top{
+    display: none;
+}
+.fc-timeGridDay-view .fc .fc-timegrid-axis-cushion{
+    text-align: center;
+}
+.fc-timeGridDay-view .fc-timegrid-slot-label-cushion{
+    width: 100%;
+    text-align: center;
+    font-size: var(--fc-small-font-size);
+    color: #666;
+}
+.fc-timegrid-slots tr td:first-child{
+    background-color: #f9f9f9;
+}
+.fc-timeGridDay-view .fc-timegrid-axis-cushion{
+    text-align: center;
+    font-size: var(--fc-small-font-size);
+}
+.fc-timeGridDay-view .fc-daygrid-day-frame,
+.fc-timeGridDay-view .fc-timegrid-axis-frame{
+    background-color: #fffdf6;
+}
+.fc-timeGridDay-view .fc-scrollgrid-section > td{
+    height: 5px;
+}
+.fc-timeGridDay-view .fc-scrollgrid-section-body:first-of-type > td{
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.fc-timeGridDay-view .fc-scrollgrid-section:nth-child(2) > td{
+    border-bottom: 1px solid #d9d9d9;
+}
+.fc .fc-timegrid-col.fc-day-today{
+    background-color: #fff;
+}

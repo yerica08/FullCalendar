@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:ital,opsz@0,14..32;1,14..32&family=Noto+Sans+KR:wght@100..900&display=swap');
+/*
+    import fonts
+
+    1. Gothic A1: CSS classes
+    .gothic-a1-thin {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+    
+    .gothic-a1-extralight {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .gothic-a1-light {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .gothic-a1-regular {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .gothic-a1-medium {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    .gothic-a1-semibold {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    
+    .gothic-a1-bold {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .gothic-a1-extrabold {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
+    
+    .gothic-a1-black {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    2. Noto Sans KR: CSS class for a variable style
+    // <weight>: Use a value from 100 to 900
+    // <uniquifier>: Use a unique and descriptive class name
+    .noto-sans-kr-<uniquifier> {
+      font-family: "Noto Sans KR", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+
+    3. Inter: CSS class for a variable style
+    // <uniquifier>: Use a unique and descriptive class name
+    .inter-<uniquifier> {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+*/
+/* 스타일 초기화 */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, i {
+   display: block;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+   content: '';
+   content: none;
+}
+a {
+    display: inline-block;
+    font: inherit;
+    text-decoration: none;
+    color: #222;
+}
+img {
+   display: inline-block;
+   border: none;
+}
+svg, label{
+     display: inline-block;
+}
+input {
+   border: none;
+   outline: none;
+   box-sizing: border-box;
+}
+select, button{
+    display: inline-block;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+a, a span, select, option, input, label {
+    cursor: pointer;
+}
+input[type="date"],
+input[type="text"]{
+    cursor: text;
+}
+input[type="text"]::placeholder{
+    color: #727272;
+    font-weight: 300;
+}
+textarea {
+   background-color: transparent;
+   resize: none;
+   border: none;
+   outline: none;
+   padding: 0;
+}
+/* 드레그 막기*/
+input[type="radio"] + label,
+.page_style span,
+.page_style a,
+select,
+input[type="checkbox"] + label {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 
+    << 기본 스타일 추가 >> 
+    1. input[type="checkbox"] / input[type="radio"]
+    2. input[type="text"]
+    3. input[type="number"].reset
+    4. table / table.fix-01 / table.fix-02
+*/
+
+/* 1. input[type="checkbox"] / input[type="radio"] */
+input[type="radio"],
+input[type="checkbox"]{
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    margin-right: 3px;
+    border: 1px solid #c3c6cf;
+    border-radius: 3px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-clip: content-box;
+    padding: 0.15em;
+}
+input[type="radio"]{
+    border-radius: 100%;
+}
+input[type="radio"]:checked,
+input[type="checkbox"]:checked{
+    background-color: #6699ff;
+    border-color: #6699ff;
+}
+/* 2. input[type="text"] */
+input[type="text"]:focus{
+    outline: none;
+    border: 1px solid #21BDCA;
+    box-shadow: 0 0 4px #efefef;
+    background-color: #fff;
+}
+
+/* 3. input[type="number"].reset */
+
+input[type="number"].reset::-webkit-outer-spin-button,
+input[type="number"].reset::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+input[type="number"].reset:hover::-webkit-outer-spin-button,
+input[type="number"].reset:hover::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+/* 파이어폭스에서의 초기화 */
+input[type=number].reset {
+   -moz-appearance: textfield !important;
+}
+input[type=number].reset:hover {
+   -moz-appearance: textfield !important;
+}
+
+/* 4. table / table.fix-01 / table.fix-02 */
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+table.fix-01 th, table.fix-01 td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+table.fix-02 th, table.fix-02 td{
+    /* 동시에 적용되어 있을 경우 break-all 이 우선 적용됨 */
+    word-wrap: break-word; /* 단어 위주 줄바꿈 */
+    word-break: break-all; /* 문자 단위 줄바꿈(문자 깨트림) */
+}
+
+/* 폰트 */
+a, input, select, option, button, body, *{
+    font-family: "Malgun Gothic","Gothic A1";
+    font-size: 12px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+html{
+    overflow: hidden;
+}
